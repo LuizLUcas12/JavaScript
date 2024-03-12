@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verificador de Idade</title>
+</head>
+<body>
+
+<h1>Verificador de Idade</h1>
+
+<label for="anoNascimento">Ano de Nascimento:</label>
+<input type="date" id="anoNascimento">
+
+<button onclick="calcularIdade()">Verificar Idade</button>
+
+<script>
+    function calcularIdade() {
+      
+        const anoNascimento = new Date (document.getElementById("anoNascimento").value);
+        const anoAtual = new Date().getFullYear();
+
+       
+        const idade = anoAtual - anoNascimento;
+
+       
+        alert("Sua idade é: " + idade + " anos.");
+    }
+</script>
+
+
+</body>
+</html>

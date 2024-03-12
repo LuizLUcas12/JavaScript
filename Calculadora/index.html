@@ -11,8 +11,8 @@
     <h2>Calculadora Simples</h2>
 
     <label for="Numer1">Número 1:</label>
-    <input type="number" id="Numer1">
-
+    <input type="number" id="Numero1">
+    <br><br
     <label for="Numero2">Número 2:</label>
     <input type="number" id="Numero2">
 
@@ -29,23 +29,23 @@
 
     <script>
         function calcular(operacao) {
-            var num1 = parseFloat(document.getElementById("Numero1").value);
-            var num2 = parseFloat(document.getElementById("Numero2").value);
-            var resultado;
+            let num1 = parseFloat(document.getElementById("Numero1").value);
+            let num2 = parseFloat(document.getElementById("Numero2").value);
+            let resultado;
 
             switch (operacao) {
                 case 'soma':
-                    resultado = Numero1 + Numero2;
+                    resultado = num1 + num2;
                     break;
                 case 'subtracao':
-                    resultado = Numero1 - Numero2;
+                    resultado = num1 - num2;
                     break;
                 case 'multiplicacao':
-                    resultado = Numero1 * Numero2;
+                    resultado = num1 * num2;
                     break;
                 case 'divisao':
                     if (Numero2 !== 0) {
-                        resultado = Numero1 / Numero2;
+                        resultado = num1 / num2;
                     } else {
                         alert("Não é possível dividir por zero.");
                         return;
