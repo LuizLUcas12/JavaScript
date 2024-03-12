@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+
+</head>
+<body>
+
+    <h2>Calculadora Simples</h2>
+
+    <label for="Numer1">Número 1:</label>
+    <input type="number" id="Numer1">
+
+    <label for="Numero2">Número 2:</label>
+    <input type="number" id="Numero2">
+
+    <br><br>
+
+    <button onclick="calcular('soma')">Somar</button>
+    <button onclick="calcular('subtracao')">Subtrair</button>
+    <button onclick="calcular('multiplicacao')">Multiplicar</button>
+    <button onclick="calcular('divisao')">Dividir</button>
+
+    <br><br>
+
+    <p>Resultado: <span id="resultado"></span></p>
+
+    <script>
+        function calcular(operacao) {
+            var num1 = parseFloat(document.getElementById("Numero1").value);
+            var num2 = parseFloat(document.getElementById("Numero2").value);
+            var resultado;
+
+            switch (operacao) {
+                case 'soma':
+                    resultado = Numero1 + Numero2;
+                    break;
+                case 'subtracao':
+                    resultado = Numero1 - Numero2;
+                    break;
+                case 'multiplicacao':
+                    resultado = Numero1 * Numero2;
+                    break;
+                case 'divisao':
+                    if (Numero2 !== 0) {
+                        resultado = Numero1 / Numero2;
+                    } else {
+                        alert("Não é possível dividir por zero.");
+                        return;
+                    }
+                    break;
+                default:
+                    alert("Operação não reconhecida.");
+                    return;
+            }
+
+            exibirResultado(resultado);
+        }
+
+        function exibirResultado(resultado) {
+            document.getElementById("resultado").innerText = resultado;
+        }
+    </script>
+
+</body>
+</html>
